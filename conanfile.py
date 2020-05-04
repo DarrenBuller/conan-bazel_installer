@@ -16,6 +16,7 @@ class BazelInstallerConan(ConanFile):
     homepage = "https://www.bazel.build/"
     settings = "os", "arch"
     short_paths = True
+    build_requires = "java_installer/9.0.0@bincrafters/stable"
 
     def config_options(self):
         # Checking against self.settings.* would prevent cross-building profiles from working
